@@ -3,9 +3,14 @@ import os
 import time
 
 sites = [
-  "pingsite2.streamlit.app",
-  "stalker-rtac.streamlit.app"
+  "pingsite2.streamlit.app"
 ]
+
+def cmd(command):
+  os.system(command)
+
+cmd(apt-get update -y)
+cmd(apt-get install -y iputils-ping)
 
 st.title("Streamlit Ping Site 1")
 st.subheader("Pinging Sites:")
@@ -16,6 +21,6 @@ for site in sites:
 while True:
   
   for site in sites:
-    os.system(f"ping {site}")
+    cmd(f"ping {site}")
 
   time.sleep(3600)
