@@ -3,7 +3,8 @@ import os
 import time
 
 sites = [
-  "pingsite2.streamlit.app"
+  "pingsite2.streamlit.app",
+  "stalker-rtac.streamlit.app"
 ]
 
 st.title("Streamlit Ping Site 1")
